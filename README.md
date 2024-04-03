@@ -30,7 +30,7 @@ The queue is empty.
 
 Press any key to continue . . .
 ```
-## Methods
+## [Methods](StrQueue.cpp)
 ### ```enQueue(string str)```
 - If the queue is not full, this method will increment the back index and use it to assign the string variable being passed through the method to the appropriate spot in the array that aligns with the queue. Otherwise it will display a message to the user stating the queue is full.
 ### ```deQueue(string& str)```
