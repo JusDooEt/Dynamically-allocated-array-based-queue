@@ -6,34 +6,34 @@
 * File: Source.cpp
 ***********************************************************/
 
-#include "StrQueue.h"
+#include "Queue.h"
 
 int main()
 {
 	const int QUEUE_SIZE = 5;
-	string city;
-	StrQueue* strPtr;
-	strPtr = new StrQueue(QUEUE_SIZE);
+	float valIn;
+	Queue* strPtr;
+	strPtr = new Queue(QUEUE_SIZE);
 
-	cout << "Enter the name of " << QUEUE_SIZE << " cities.\n\n";
+	cout << "Enter " << QUEUE_SIZE << " values of float data type.\n\n";
 
 	while (!strPtr->isFull())
 	{
-		cout << "Enter a city:  ";
-		getline(cin, city);
-		
-		strPtr->enQueue(city);
+		cout << "Enter a value:  ";
+		cin >> valIn;
+		cin.ignore();
+		strPtr->enQueue(valIn);
 		
 		//cout << "end of while loop\n";
 	}
 
 	cout << "\nNow dequeing...\n";
-	cout << "\nHere are the cities:\n\n";
+	cout << "\nHere are the numbers:\n\n";
 	
 	while (!strPtr->isEmpty())
 	{
-		strPtr->deQueue(city);
-		cout << city << '\n';
+		strPtr->deQueue(valIn);
+		cout << valIn << '\n';
 	}
 
 	cout << endl;
